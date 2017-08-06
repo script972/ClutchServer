@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="clutch@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="clutch">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <table id="7" parent="2" name="card"/>
+    <table id="8" parent="2" name="cardgroup"/>
+    <table id="9" parent="2" name="company"/>
+    <table id="10" parent="2" name="sequence"/>
+    <column id="11" parent="7" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="12" parent="7" name="ACCESS">
+      <Position>2</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="13" parent="7" name="AUTHER">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="14" parent="7" name="BARKODE">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="15" parent="7" name="DATEADD">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="16" parent="7" name="DESCRIPTION">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="17" parent="7" name="INSPECTION">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="18" parent="7" name="LASTREQUEST">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="19" parent="7" name="PHOTOBACK">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="20" parent="7" name="PHOTOFRONT">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="21" parent="7" name="RANG">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="22" parent="7" name="CARDGROUP_ID">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="23" parent="7" name="FK_CARD_CARDGROUP_ID">
+      <ColNames>CARDGROUP_ID</ColNames>
+    </index>
+    <key id="24" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="25" parent="7" name="FK_CARD_CARDGROUP_ID">
+      <ColNames>CARDGROUP_ID</ColNames>
+      <RefSchemaName>clutch</RefSchemaName>
+      <RefTableName>cardgroup</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="26" parent="8" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="8" name="AVAILABLE">
+      <Position>2</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="28" parent="8" name="DESCRIPTION">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="8" name="RANG">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="30" parent="8" name="TITLE">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="8" name="IDCOMPANY_ID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="32" parent="8" name="FK_CARDGROUP_IDCOMPANY_ID">
+      <ColNames>IDCOMPANY_ID</ColNames>
+    </index>
+    <key id="33" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="34" parent="8" name="FK_CARDGROUP_IDCOMPANY_ID">
+      <ColNames>IDCOMPANY_ID</ColNames>
+      <RefSchemaName>clutch</RefSchemaName>
+      <RefTableName>company</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="35" parent="9" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="9" name="ADDRESS">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="37" parent="9" name="DESCRIPTION">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="9" name="GENERALCARD">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="39" parent="9" name="PARENTID">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="40" parent="9" name="TITLE">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="41" parent="9" name="X">
+      <Position>7</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="42" parent="9" name="Y">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="43" parent="9" name="CARDGROUP_ID">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="44" parent="9" name="FK_COMPANY_CARDGROUP_ID">
+      <ColNames>CARDGROUP_ID</ColNames>
+    </index>
+    <key id="45" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="46" parent="9" name="FK_COMPANY_CARDGROUP_ID">
+      <ColNames>CARDGROUP_ID</ColNames>
+      <RefSchemaName>clutch</RefSchemaName>
+      <RefTableName>cardgroup</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="47" parent="10" name="SEQ_NAME">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="10" name="SEQ_COUNT">
+      <Position>2</Position>
+      <DataType>decimal(38)|0</DataType>
+    </column>
+    <key id="49" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SEQ_NAME</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
